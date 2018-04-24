@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <h1 id="main" onmouseover="test1()" onmouseout="test2()"> Web Bhumi</h1>
+</body>
+<script>
+    var ele=document.getElementById("main");
+    function test1()
+    {
+    ele.style.fontSize="50px";
+    ele.style.boxShadow="5px 5px 5px 5px red";
+    }
+    function test2()
+    {
+    ele.style.fontSize="";
+    ele.style.boxShadow="";
+    }
+</script>
+</html>

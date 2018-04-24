@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    #main
+    {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        transition-duration: 3s;
+    }
+    </style>
+</head>
+<body>
+    <button onclick="changeall()">Edit</button>
+    <p id="main">Hello Web Bhumi</p>
+</body>
+<script>
+
+    function changeall ()
+    {
+        var ele = document.getElementById("main");
+        ele.innerHTML= window.prompt("please enter some text");
+        ele.style.textDecoration="line-through";
+        ele.style.color=window.prompt("Enter text color");
+        ele.style.border= "1px solid "+window.prompt("please enter border color");
+        ele.style.top=window.prompt("Enter x displacement")+"px";
+        ele.style.left=window.prompt("Enter y displacement")+"px";
+        ele.style.backgroundColor= window.prompt("Enter BG color");
+
+    }
+</script>
+</html>
