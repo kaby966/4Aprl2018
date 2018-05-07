@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="showdata()">Show</button>
+   <div id="main">
+
+   </div> 
+</body>
+<script>
+    var persons = [{name:"Mayank",number:999999,address:"Indore"},
+                   {name:"Kapil",number:999999,address:"Indore"},
+                   {name:"Kanupriya",number:999999,address:"Indore"},
+                   {name:"Dimple",number:999999,address:"Indore"}];
+
+                    function showdata(){
+
+                   for(i=0;i<persons.length;i++)
+                   {
+                       var ele1 = document.createElement("h1");
+                       ele1.innerHTML="My name is "+persons[i].name;
+                       document.getElementById("main").appendChild(ele1);
+                   }
+                    }
+</script>
+</html>

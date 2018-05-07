@@ -1,0 +1,21 @@
+.card{
+	
+	height:300px;
+	margin-bottom: 50px;
+	background-color: #ffe0bd;
+}
+.card-title{
+	height: 50px;
+}
+h3{
+	margin-top: 50px;
+}
+.container{
+	background-color: pink;
+}
+.carousel-control-prev-icon{
+	margin-bottom: 440px;
+}
+.carousel-control-next-icon{
+	margin-bottom: 440px;
+}
