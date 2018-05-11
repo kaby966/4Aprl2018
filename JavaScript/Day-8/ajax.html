@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="showAllData()">SHow Data</button>
+    <input type="text" name="" id="searchData">
+    <div class="main" id="main">
+        Hello
+    </div>
+
+    <script>
+    function showAllData(){
+    var xmlreq= new XMLHttpRequest();
+    xmlreq.onreadystatechange=function(){
+        if(this.readyState==4&&this.status==200)
+        {
+            var data = JSON.parse(this.responseText).Books;
+            console.log(data);
+            document.getElementById("main").innerHTML="";
+            for(i=0;i<data.length;i++)
+            {
+                createBookEle(data[i]);
+            }
+        }
+    }
+    xmlreq.open("GET","http://it-ebooks-api.info/v1/search/"+document.getElementById("searchData").value,true);
+    xmlreq.send();
+
+    function createBookEle(book)
+    {
+        var top= document.createElement("div");
+        var title= document.createElement("h1");
+        title.innerHTML=book.Title;
+        var para=document.createElement("p");
+        para.innerHTML=book.Description;
+        var image = document.createElement("img");
+        image.src=book.Image;
+        top.appendChild(title);
+        top.appendChild(para);
+        top.appendChild(image);
+        document.getElementById("main").appendChild(top);
+    }
+    }
+    </script>
+</body>
+</html>
