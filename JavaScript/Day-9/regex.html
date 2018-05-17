@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<input type="text" name="" id="aapnaInput" onblur="checkInput()">
+<input type="text" name="" id="">
+
+<script>
+    var regex1 = /^[a-z0-9]{3,30}[@]webbhumi[.]com$/;
+    function checkInput()
+    {
+        var inp=document.getElementById("aapnaInput");
+        if(regex1.test(inp.value))
+        {
+            inp.style.border="1px solid green";
+            
+        }
+        else
+        {
+            inp.style.border="1px solid red";
+            console.log("haha");
+        }
+    }
+
+</script>
+</body>
+</html>
